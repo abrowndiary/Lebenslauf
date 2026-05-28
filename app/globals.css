@@ -68,3 +68,49 @@ select {
     min-height: 297mm !important;
   }
 }
+
+@layer components {
+  .primary-action {
+    @apply inline-flex items-center gap-2 rounded-md bg-brand-navy px-4 py-2.5 text-sm font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand-green disabled:translate-y-0 disabled:opacity-60;
+  }
+
+  .secondary-action {
+    @apply inline-flex items-center gap-2 rounded-md border border-brand-navy/10 bg-white px-3 py-2 text-sm font-bold text-brand-navy transition duration-200 hover:-translate-y-0.5 hover:border-brand-green/50 hover:text-brand-green disabled:translate-y-0 disabled:opacity-60;
+  }
+
+  .icon-button {
+    @apply inline-flex items-center gap-2 rounded-md border border-brand-navy/10 bg-white px-3 py-2 text-sm font-bold text-brand-navy transition hover:border-brand-green/50 hover:text-brand-green;
+  }
+
+  .icon-only {
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-brand-navy/10 bg-white text-brand-navy transition hover:border-red-300 hover:text-red-600;
+  }
+
+  .nav-button {
+    @apply flex w-full items-center gap-3 rounded-md px-3 py-3 text-left text-sm font-bold text-brand-ink/60 transition duration-200 hover:bg-brand-paper hover:text-brand-navy;
+  }
+
+  .nav-button-active {
+    @apply bg-brand-navy text-white shadow-sm hover:bg-brand-navy hover:text-white;
+  }
+
+  .field-input {
+    @apply rounded-md border border-brand-navy/10 bg-white px-3 py-3 font-medium text-brand-ink outline-none transition focus:border-brand-green focus:ring-4 focus:ring-brand-mint/15;
+  }
+}
+
+@keyframes tile-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.motion-tile {
+  animation: tile-rise 420ms ease both;
+}

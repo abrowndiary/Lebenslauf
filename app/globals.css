@@ -1,35 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: "Qualy";
-  src: url("/fonts/Qualy-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "MazzardL";
-  src: url("/fonts/MazzardL-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "MazzardL";
-  src: url("/fonts/MazzardL-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   color-scheme: light;
   background: #f7faf8;
   color: #071626;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
 }
 
 * {
@@ -42,7 +22,9 @@ body {
     radial-gradient(circle at top left, rgba(35, 226, 139, 0.18), transparent 28rem),
     linear-gradient(180deg, #ffffff 0%, #f7faf8 44%, #edf5f0 100%);
   color: #071626;
-  font-family: "MazzardL", Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", Inter, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
 }
 
 button,

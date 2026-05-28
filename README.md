@@ -7,7 +7,7 @@ This project is a clean implementation and does not derive from `resume-lm`, bec
 ## MVP Scope
 
 - German and English interface
-- Branded CV editor using Qualy for headings and MazzardL for body text
+- Branded CV editor using Plus Jakarta Sans from Google Fonts
 - A4 live preview
 - Browser print/PDF export
 - AI provider abstraction with mock mode by default
@@ -44,8 +44,7 @@ pnpm dev
 - Primary mint: `#23E28B`
 - Primary green: `#19BA75`
 - Primary navy: `#00204F`
-- Heading font: Qualy Bold
-- Body font: MazzardL
+- UI/CV font: Plus Jakarta Sans from Google Fonts
 
 ## Legal Direction
 

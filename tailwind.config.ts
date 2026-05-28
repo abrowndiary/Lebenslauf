@@ -14,8 +14,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        heading: ["Qualy", "MazzardL", "Arial", "sans-serif"],
-        body: ["MazzardL", "Arial", "sans-serif"]
+        heading: ["Plus Jakarta Sans", "Inter", "Arial", "sans-serif"],
+        body: ["Plus Jakarta Sans", "Inter", "Arial", "sans-serif"]
       },
       boxShadow: {
         panel: "0 24px 70px rgba(0, 32, 79, 0.12)"

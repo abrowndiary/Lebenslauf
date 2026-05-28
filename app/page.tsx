@@ -320,7 +320,7 @@ export default function Home() {
 
         <aside className="sticky top-20 h-fit">
           <div className="no-print mb-3 flex items-center justify-between">
-            <h2 className="font-heading text-2xl text-brand-navy">Live A4</h2>
+            <h2 className="font-heading text-xl font-extrabold text-brand-navy">Live A4</h2>
             <span className="rounded-md bg-white px-2 py-1 text-xs font-bold text-brand-green">{settings.template}</span>
           </div>
           <CVPreview cv={cv} settings={settings} />
@@ -340,13 +340,13 @@ function Hero({ locale }: { locale: Locale }) {
             <Sparkles size={16} />
             {t.productLine}
           </p>
-          <h1 className="font-heading text-5xl leading-none text-brand-navy md:text-6xl">Lebenslauf</h1>
+          <h1 className="font-heading text-4xl font-extrabold leading-tight text-brand-navy md:text-5xl">Lebenslauf</h1>
           <p className="mt-4 max-w-2xl text-base leading-7 text-brand-ink/70">{t.subtitle}</p>
         </div>
         <div className="grid grid-cols-3 gap-2 text-center">
           {["CV", "ATS", "AI"].map((item, index) => (
             <div key={item} className="motion-tile rounded-md bg-brand-paper px-4 py-3" style={{ animationDelay: `${index * 90}ms` }}>
-              <p className="font-heading text-2xl text-brand-navy">{item}</p>
+              <p className="font-heading text-xl font-extrabold text-brand-navy">{item}</p>
             </div>
           ))}
         </div>
@@ -637,7 +637,7 @@ function AIResults({ aiItems, cv, setCv }: { aiItems: AIResponse; cv: CVData; se
   const firstExperience = cv.experience[0];
   return (
     <Panel title="AI results" icon={Bot}>
-      {"score" in aiItems && <p className="mb-3 text-3xl font-bold text-brand-navy">{aiItems.score}% match</p>}
+      {"score" in aiItems && <p className="mb-3 text-2xl font-extrabold text-brand-navy">{aiItems.score}% match</p>}
       <div className="grid gap-4 xl:grid-cols-2">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-green">Suggestions</p>
@@ -685,7 +685,7 @@ function CVPreview({ cv, settings }: { cv: CVData; settings: TemplateSettings })
     >
       <header className="border-b pb-6" style={{ borderColor: settings.accent }}>
         <p className="font-bold uppercase tracking-[0.18em]" style={{ color: settings.accent }}>{cv.title}</p>
-        <h2 className="mt-2 font-heading text-5xl leading-none text-brand-navy">{cv.name}</h2>
+        <h2 className="mt-2 font-heading text-4xl font-extrabold leading-tight text-brand-navy">{cv.name}</h2>
         <p className="mt-4 leading-6 text-brand-ink/65">
           {cv.location} | {cv.email} | {cv.phone} | {cv.website}
         </p>
@@ -754,7 +754,7 @@ function CVPreview({ cv, settings }: { cv: CVData; settings: TemplateSettings })
 }
 
 function PreviewHeading({ label, color }: { label: string; color: string }) {
-  return <h3 className="font-heading text-2xl text-brand-navy" style={{ borderLeft: `4px solid ${color}`, paddingLeft: 10 }}>{label}</h3>;
+  return <h3 className="font-heading text-xl font-extrabold text-brand-navy" style={{ borderLeft: `4px solid ${color}`, paddingLeft: 10 }}>{label}</h3>;
 }
 
 function PreviewList({ label, items, color, chips = false }: { label: string; items: string[]; color: string; chips?: boolean }) {
@@ -778,7 +778,7 @@ function Panel({ title, icon: Icon, action, children }: { title: string; icon: R
   return (
     <section className="rounded-md border border-brand-navy/10 bg-white/94 p-5 shadow-panel">
       <div className="mb-4 flex items-center justify-between gap-3">
-        <h2 className="flex items-center gap-2 font-heading text-3xl text-brand-navy">
+        <h2 className="flex items-center gap-2 font-heading text-2xl font-extrabold text-brand-navy">
           <Icon size={23} />
           {title}
         </h2>
@@ -794,7 +794,7 @@ function Metric({ icon: Icon, label, value }: { icon: React.ElementType; label: 
     <div className="motion-tile rounded-md border border-brand-navy/10 bg-white p-4 shadow-panel">
       <Icon size={20} className="text-brand-green" />
       <p className="mt-4 text-sm font-bold text-brand-ink/55">{label}</p>
-      <p className="mt-1 font-heading text-3xl text-brand-navy">{value}</p>
+      <p className="mt-1 font-heading text-2xl font-extrabold text-brand-navy">{value}</p>
     </div>
   );
 }
